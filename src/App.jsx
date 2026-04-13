@@ -9,6 +9,30 @@ const App = () => {
   
   const projects = [
     {
+      title: "MEC Ride",
+      desc: "A real-time taxi-sharing platform (PWA) designed for urban commuters to split travel costs and organize shared trips efficiently.",
+      tags: ["Firebase", "PWA", "Vanilla JS"],
+      link: "https://mec-ride-anti.web.app/"
+    },
+    {
+      title: "IdeaLab Manager",
+      desc: "A modern Flutter application for maker spaces to track inventory, handle student requests, and manage equipment loans.",
+      tags: ["Flutter", "Firebase", "Mobile"],
+      link: "https://github.com/danyl-dnl/LendLab"
+    },
+    {
+      title: "Chat App",
+      desc: "A real-time messaging application built with Node.js facilitating instant communication.",
+      tags: ["JavaScript", "Node.js", "WebSockets"],
+      link: "https://github.com/danyl-dnl/Chat-app"
+    },
+    {
+      title: "LocalHelp AI",
+      desc: "AI-Powered Civic Intelligence Platform enabling local authorities and citizens to report, cluster, and manage civic issues in real-time.",
+      tags: ["React", "FastAPI", "AI"],
+      link: "https://github.com/danyl-dnl/ai-for-bharath"
+    },
+    {
       title: "Chandrettan's Canteen",
       desc: "A canteen management app built to streamline food ordering and reduce queues for students.",
       tags: ["React", "Firebase", "Tailwind"],
@@ -19,18 +43,6 @@ const App = () => {
       desc: "A Next.js web app utilizing AI to score resumes and provide actionable feedback for students.",
       tags: ["Next.js", "AI", "Web"],
       link: "https://resumelensmec-git-main-danyl-thomas-projects.vercel.app/login"
-    },
-    {
-      title: "Speed Typing",
-      desc: "A tool to test and improve typing speed, built to analyze WPM and accuracy in real-time.",
-      tags: ["JavaScript", "Frontend", "Game"],
-      link: "https://speed-type-407bd.web.app/"
-    },
-    {
-      title: "AI Chatbot",
-      desc: "An conversational interface designed to answer queries and assist users with automated tasks.",
-      tags: ["Python", "NLP", "AI"],
-      link: "#"
     }
   ];
 
@@ -131,6 +143,7 @@ const App = () => {
                   <div className="flex items-center gap-2 hover:text-white transition-colors"><Terminal size={18}/> Java</div>
                   <div className="flex items-center gap-2 hover:text-white transition-colors"><Cpu size={18}/> Python</div>
                   <div className="flex items-center gap-2 hover:text-white transition-colors">C</div>
+                  <div className="flex items-center gap-2 hover:text-white transition-colors">C++</div>
                 </div>
 
                 <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4 text-left">Dev Toolkit</p>
@@ -253,7 +266,7 @@ const RevealOnScroll = ({ children, delay = 0 }) => {
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-1000 ease-out transform ${
+      className={`h-full transition-all duration-1000 ease-out transform ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
@@ -268,16 +281,16 @@ const ProjectCard = ({ title, desc, tags, link }) => (
     href={link} 
     target="_blank" 
     rel="noopener noreferrer" 
-    className="group block p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/50 transition-all hover:-translate-y-1 hover:bg-white/[0.07]"
+    className="group flex flex-col h-full p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/50 transition-all hover:-translate-y-1 hover:bg-white/[0.07]"
   >
     <div className="flex justify-between items-start mb-4">
       <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors">{title}</h3>
       <ExternalLink size={18} className="text-gray-500 group-hover:text-green-400 transition-colors"/>
     </div>
-    <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+    <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">
       {desc}
     </p>
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-2 flex-wrap mt-auto">
       {tags.map((tag) => (
         <span key={tag} className="text-xs px-3 py-1 rounded-full bg-white/5 text-green-400 border border-white/5">
           {tag}
