@@ -45,10 +45,10 @@ const App = () => {
       link: "https://github.com/danyl-dnl/LendLab"
     },
     {
-      title: "Chat App",
-      desc: "A real-time messaging application built with Node.js facilitating instant communication.",
-      tags: ["JavaScript", "Node.js", "WebSockets"],
-      link: "https://github.com/danyl-dnl/Chat-app"
+      title: "ShopMate",
+      desc: "An AI-powered WhatsApp assistant for grocery stores that automates inventory management, extracts sales via NLP, and generates bills.",
+      tags: ["Node.js", "OpenAI", "Supabase", "WhatsApp API"],
+      link: "https://github.com/danyl-dnl/ShopMate"
     },
     {
       title: "LocalHelp AI",
